@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="521.0" prefWidth="1031.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewController.Customers">
+   <children>
+      <RadioButton layoutX="14.0" layoutY="14.0" mnemonicParsing="false" selected="true" text="Customers" />
+      <RadioButton layoutX="104.0" layoutY="14.0" mnemonicParsing="false" onAction="#radioButtonReports" text="Reports" />
+      <RadioButton layoutX="181.0" layoutY="14.0" mnemonicParsing="false" onAction="#radioButtonAppointments" text="Appointments" />
+      <TableView fx:id="TableView_Customers" layoutX="234.0" layoutY="74.0" prefHeight="335.0" prefWidth="772.0">
+        <columns>
+          <TableColumn fx:id="Table_Customers_IDColumn" prefWidth="42.20001220703125" text="ID" />
+          <TableColumn fx:id="Table_Customers_NameColumn" prefWidth="162.199951171875" text="Name" />
+            <TableColumn fx:id="Table_Customers_AddressColumn" prefWidth="157.800048828125" text="Address" />
+            <TableColumn fx:id="Table_Customers_FirstLevelDivisionColumn" minWidth="0.0" prefWidth="83.5999755859375" text="Division ID" />
+            <TableColumn fx:id="Table_Customers_PostalCodeColumn" prefWidth="132.199951171875" text="Postal Code" />
+            <TableColumn fx:id="Table_Customers_PhoneColumn" prefWidth="141.0" text="Phone" />
+        </columns>
+      </TableView>
+      <Label layoutX="463.0" layoutY="14.0" text="Customers">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font></Label>
+      <Label layoutX="34.0" layoutY="74.0" text="Customer Information" />
+      <Button fx:id="Button_Customers_Clear" layoutX="447.0" layoutY="426.0" mnemonicParsing="false" onAction="#clearCustomers" text="Clear" />
+      <Button fx:id="Button_Customers_Update" layoutX="383.0" layoutY="426.0" mnemonicParsing="false" text="Update" />
+      <Button fx:id="Button_Customers_Add" layoutX="269.0" layoutY="426.0" mnemonicParsing="false" text="Add" />
+      <Button fx:id="Button_Customers_Delete" layoutX="325.0" layoutY="426.0" mnemonicParsing="false" onAction="#deleteCustomer" text="Delete" />
+      <TextField fx:id="TextField_CustomerID" editable="false" layoutX="18.0" layoutY="102.0" promptText="Customer ID" />
+      <TextField fx:id="TextField_CustomerName" layoutX="18.0" layoutY="136.0" promptText="Customer Name" />
+      <TextField fx:id="TextField_CustomerAddress" layoutX="18.0" layoutY="170.0" promptText="Customer Address" />
+      <TextField fx:id="TextField_Customer_PostalCode" layoutX="18.0" layoutY="203.0" promptText="Customer Postal Code" />
+      <TextField fx:id="TextField_CustomerPhoneNumber" layoutX="18.0" layoutY="242.0" promptText="Customer Phone Number" />
+      <ComboBox fx:id="ComboBox_Country" layoutX="17.0" layoutY="280.0" onAction="#filterFirstLevelDivision" prefWidth="150.0" promptText="Country" />
+      <ComboBox fx:id="ComboBox_FirstLevelDivision" layoutX="17.0" layoutY="322.0" prefWidth="150.0" promptText="First Level Division" />
+   </children>
+</AnchorPane>

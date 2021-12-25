@@ -1,4 +1,4 @@
-package Controllers;
+package ViewController;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -16,13 +16,13 @@ public class Appointments {
 
     //radio buttons for scene changes from appointments page
     public void radioButtonCustomers(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../FXML/Customers.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../ViewController/Customers.fxml")));
         Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         primaryStage.setScene(new Scene(root, 1100, 500));
     }
 
     public void radioButtonReports(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../FXML/Reports.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../ViewController/Reports.fxml")));
         Stage primaryStage = (Stage)((Node)event.getSource()).getScene().getWindow();
         primaryStage.setScene(new Scene(root, 1100, 500));
     }

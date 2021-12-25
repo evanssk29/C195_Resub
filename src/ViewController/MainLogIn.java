@@ -1,4 +1,4 @@
-package Controllers;
+package ViewController;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -33,7 +33,7 @@ public class MainLogIn {
         String userID = logInUserIDTextField.getText();
         String userPassword = logInUserPasswordField.getText();
         if (userID.equals("test") && userPassword.equals("test")) {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../FXML/Customers.fxml")));
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../ViewController/Customers.fxml")));
             Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             primaryStage.setScene(new Scene(root, 1100, 500));
             Customers login = new Customers();

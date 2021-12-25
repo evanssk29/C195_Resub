@@ -1,22 +1,22 @@
 package Models;
 
 public class Country {
-    private String countryName;
-    private int countryID;
+    private String CountryTitle;
+    private int CountryName;
 
 
-    public Country(int countryID, String countryName) {
-        this.countryID = countryID;
-        this.countryName = countryName;
+    public Country(int CountryName, String CountryTitle) {
+        this.CountryName = CountryName;
+        this.CountryTitle = CountryTitle;
     }
 
-    /** @return countryID */
-    public int getCountryID() {
-        return countryID;
+    /** @return CountryName */
+    public int getCountryName() {
+        return CountryName;
     }
 
-    /** get countryName */
-    public String getCountryName() {
-        return countryName;
+    /** get CountryTitle */
+    public String getCountryTitle() {
+        return CountryTitle;
     }
 }

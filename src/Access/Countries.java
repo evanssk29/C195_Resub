@@ -1,4 +1,4 @@
-package DBAccess;
+package Access;
 
 import Utilities.ConnectionDB;
 import Models.Country;
@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class DBCountries {
+public class Countries {
 
     public static ObservableList<Country> getAllCountries() throws SQLException {
         ObservableList<Country> countriesObservableList = FXCollections.observableArrayList();
@@ -17,9 +17,9 @@ public class DBCountries {
         PreparedStatement ps = ConnectionDB.getConnection().prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
         while (rs.next()) {
-            int countryID = rs.getInt("Country_ID");
-            String countryName = rs.getString("Country");
-            Country country = new Country(countryID, countryName);
+            int CountryName = rs.getInt("Country_ID");
+            String CountryTitle = rs.getString("Country");
+            Country country = new Country(CountryName, CountryTitle);
             countriesObservableList.add(country);
         }
         return countriesObservableList;
