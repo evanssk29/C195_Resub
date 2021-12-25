@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainLogIn">
+   <children>
+      <Button fx:id="enterLogInFormButton" layoutX="274.0" layoutY="240.0" mnemonicParsing="false" onAction="#validateLogIn" text="Enter" />
+      <Label fx:id="logInFormTitle" layoutX="148.0" layoutY="54.0" text="Appointment Management System Log In">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></Label>
+      <Label fx:id="userLogInLocationLabel" layoutX="81.0" layoutY="315.0" text="Location" />
+      <PasswordField fx:id="logInUserPasswordField" layoutX="228.0" layoutY="174.0" promptText="Enter User Password" />
+      <TextField fx:id="logInUserIDTextField" layoutX="228.0" layoutY="119.0" promptText="Enter User ID" />
+   </children>
+</AnchorPane>
